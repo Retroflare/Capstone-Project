@@ -1,0 +1,1171 @@
+[debug] [2023-08-21T03:25:04.653Z] ----------------------------------------------------------------------
+[debug] [2023-08-21T03:25:04.656Z] Command:       /usr/local/bin/node /usr/local/bin/firebase functions:shell
+[debug] [2023-08-21T03:25:04.657Z] CLI Version:   12.4.8
+[debug] [2023-08-21T03:25:04.658Z] Platform:      darwin
+[debug] [2023-08-21T03:25:04.658Z] Node Version:  v18.17.0
+[debug] [2023-08-21T03:25:04.660Z] Time:          Sun Aug 20 2023 23:25:04 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-08-21T03:25:04.660Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-21T03:25:04.664Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-08-21T03:25:04.786Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-21T03:25:04.786Z] > authorizing via signed-in user (flarebrady@gmail.com)
+[debug] [2023-08-21T03:25:04.787Z] [iam] checking project final-capstone-60846 for permissions ["firebase.projects.get"]
+[debug] [2023-08-21T03:25:04.788Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/final-capstone-60846:testIamPermissions [none]
+[debug] [2023-08-21T03:25:04.788Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/final-capstone-60846:testIamPermissions x-goog-quota-user=projects/final-capstone-60846
+[debug] [2023-08-21T03:25:04.788Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/final-capstone-60846:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-08-21T03:25:04.922Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-08-21T03:25:04.922Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-08-21T03:25:04.986Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/final-capstone-60846:testIamPermissions 200
+[debug] [2023-08-21T03:25:04.986Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/final-capstone-60846:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-08-21T03:25:05.126Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-08-21T03:25:05.128Z] defaultcredentials: writing to file /Users/tjcc/.config/firebase/flarebrady_gmail_com_application_default_credentials.json
+[debug] [2023-08-21T03:25:05.130Z] DEBUG: Setting GAC to /Users/tjcc/.config/firebase/flarebrady_gmail_com_application_default_credentials.json
+[debug] [2023-08-21T03:25:05.130Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/final-capstone-60846/adminSdkConfig [none]
+[debug] [2023-08-21T03:25:05.470Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/final-capstone-60846/adminSdkConfig 200
+[debug] [2023-08-21T03:25:05.470Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/final-capstone-60846/adminSdkConfig {"projectId":"final-capstone-60846","storageBucket":"final-capstone-60846.appspot.com"}
+[debug] [2023-08-21T03:25:05.552Z] [functions] Watching "/Users/tjcc/Desktop/final-capstone/final-capstone/functions" for Cloud Functions...
+[debug] [2023-08-21T03:25:05.565Z] Validating nodejs source
+[debug] [2023-08-21T03:25:06.385Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T03:25:06.385Z] Building nodejs source
+[debug] [2023-08-21T03:25:06.386Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T03:25:06.388Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T03:25:06.394Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8873
+
+[debug] [2023-08-21T03:25:07.261Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T03:25:07.280Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T03:25:07.280Z] [functions[us-central1-api]] http function initialized (http://127.0.0.1:5000/final-capstone-60846/us-central1/api).
+[info] i  functions: Loaded functions: api 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-08-21T13:41:08.412Z] Functions emulator received unknown request at path /checkout
+[debug] [2023-08-21T13:41:08.739Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-08-21T15:36:07.087Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:36:08.124Z] Validating nodejs source
+[debug] [2023-08-21T15:36:09.267Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:36:09.268Z] Building nodejs source
+[debug] [2023-08-21T15:36:09.269Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:36:09.278Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:36:09.289Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8953
+
+[debug] [2023-08-21T15:36:10.203Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:36:10.228Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:36:17.093Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:36:17.192Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:36:18.194Z] Validating nodejs source
+[debug] [2023-08-21T15:36:19.076Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:36:19.077Z] Building nodejs source
+[debug] [2023-08-21T15:36:19.077Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:36:19.077Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:36:19.079Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8287
+
+[debug] [2023-08-21T15:36:19.828Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:36:19.841Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:36:20.247Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:36:21.254Z] Validating nodejs source
+[debug] [2023-08-21T15:36:22.033Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:36:22.033Z] Building nodejs source
+[debug] [2023-08-21T15:36:22.033Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:36:22.033Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:36:22.035Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8330
+
+[debug] [2023-08-21T15:36:22.458Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:36:22.471Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:44:15.750Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:44:16.757Z] Validating nodejs source
+[debug] [2023-08-21T15:44:18.123Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:44:18.123Z] Building nodejs source
+[debug] [2023-08-21T15:44:18.123Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:44:18.123Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:44:18.124Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:44:18.125Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8154
+
+[debug] [2023-08-21T15:44:18.527Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token ':'
+[info] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-08-21T15:44:19.126Z] Validating nodejs source
+[debug] [2023-08-21T15:44:19.844Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:44:19.844Z] Building nodejs source
+[debug] [2023-08-21T15:44:19.844Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:44:19.845Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:44:19.846Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8381
+
+[debug] [2023-08-21T15:44:20.114Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token ':'
+[info] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-08-21T15:44:22.948Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:44:23.049Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:44:24.051Z] Validating nodejs source
+[debug] [2023-08-21T15:44:24.867Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:44:24.867Z] Building nodejs source
+[debug] [2023-08-21T15:44:24.867Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:44:24.868Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:44:24.870Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:44:24.871Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 9000
+
+[debug] [2023-08-21T15:44:25.870Z] Validating nodejs source
+[debug] [2023-08-21T15:44:26.555Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:44:26.555Z] Building nodejs source
+[debug] [2023-08-21T15:44:26.555Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:44:26.556Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:44:26.557Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-08-21T15:44:26.560Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:44:26.598Z] [functions] Loaded functions definitions from source: api.
+[info] Serving at port 8172
+
+[debug] [2023-08-21T15:44:27.066Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:44:27.081Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:44:35.645Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:44:35.744Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:44:36.750Z] Validating nodejs source
+[debug] [2023-08-21T15:44:37.976Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:44:37.976Z] Building nodejs source
+[debug] [2023-08-21T15:44:37.976Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:44:37.977Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:44:37.978Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8246
+
+[debug] [2023-08-21T15:44:38.490Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: ebd is not defined
+[info] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-08-21T15:44:40.153Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:44:41.156Z] Validating nodejs source
+[debug] [2023-08-21T15:44:41.923Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:44:41.924Z] Building nodejs source
+[debug] [2023-08-21T15:44:41.924Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:44:41.925Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:44:41.926Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8783
+
+[debug] [2023-08-21T15:44:42.598Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: endpoi is not defined
+[info] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-08-21T15:44:43.040Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:44:44.046Z] Validating nodejs source
+[debug] [2023-08-21T15:44:44.761Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:44:44.762Z] Building nodejs source
+[debug] [2023-08-21T15:44:44.762Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:44:44.762Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:44:44.763Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8045
+
+[debug] [2023-08-21T15:44:45.245Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:44:45.259Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:48:21.883Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:48:22.886Z] Validating nodejs source
+[debug] [2023-08-21T15:48:23.969Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:48:23.970Z] Building nodejs source
+[debug] [2023-08-21T15:48:23.970Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:48:23.971Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:48:23.973Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8420
+
+[debug] [2023-08-21T15:48:24.295Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:48:24.395Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:48:24.738Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:48:24.757Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:48:25.397Z] Validating nodejs source
+[debug] [2023-08-21T15:48:26.099Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:48:26.100Z] Building nodejs source
+[debug] [2023-08-21T15:48:26.100Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:48:26.101Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:48:26.102Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8816
+
+[debug] [2023-08-21T15:48:26.666Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:48:26.682Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:48:32.553Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:48:33.571Z] Validating nodejs source
+[debug] [2023-08-21T15:48:34.438Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:48:34.438Z] Building nodejs source
+[debug] [2023-08-21T15:48:34.438Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:48:34.438Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:48:34.439Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:48:34.440Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8372
+
+[debug] [2023-08-21T15:48:34.950Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:48:34.962Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:48:35.442Z] Validating nodejs source
+[debug] [2023-08-21T15:48:36.087Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:48:36.087Z] Building nodejs source
+[debug] [2023-08-21T15:48:36.087Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:48:36.087Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:48:36.088Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8235
+
+[debug] [2023-08-21T15:48:36.532Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:48:36.544Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:49:51.480Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:49:52.482Z] Validating nodejs source
+[debug] [2023-08-21T15:49:53.457Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:49:53.457Z] Building nodejs source
+[debug] [2023-08-21T15:49:53.457Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:49:53.458Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:49:53.459Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8649
+
+[debug] [2023-08-21T15:49:54.160Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:49:54.194Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:49:56.018Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:49:57.018Z] Validating nodejs source
+[debug] [2023-08-21T15:49:57.675Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:49:57.675Z] Building nodejs source
+[debug] [2023-08-21T15:49:57.675Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:49:57.676Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:49:57.677Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8912
+
+[debug] [2023-08-21T15:49:58.210Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:49:58.224Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:52:43.700Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:52:44.704Z] Validating nodejs source
+[debug] [2023-08-21T15:52:45.699Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:52:45.699Z] Building nodejs source
+[debug] [2023-08-21T15:52:45.699Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:52:45.700Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:52:45.700Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:52:45.701Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8852
+
+[debug] [2023-08-21T15:52:46.568Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:52:46.582Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:52:46.706Z] Validating nodejs source
+[debug] [2023-08-21T15:52:47.421Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:52:47.421Z] Building nodejs source
+[debug] [2023-08-21T15:52:47.421Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:52:47.422Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:52:47.423Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8204
+
+[debug] [2023-08-21T15:52:47.806Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:52:47.822Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-08-21T15:52:50.317Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:52:51.320Z] Validating nodejs source
+[debug] [2023-08-21T15:52:51.956Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:52:51.956Z] Building nodejs source
+[debug] [2023-08-21T15:52:51.956Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:52:51.956Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:52:51.957Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8006
+
+[debug] [2023-08-21T15:52:52.492Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: respo is not defined
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:52:52.500Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-08-21T15:52:52.602Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:52:53.604Z] Validating nodejs source
+[debug] [2023-08-21T15:52:54.240Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:52:54.240Z] Building nodejs source
+[debug] [2023-08-21T15:52:54.240Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:52:54.243Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:52:54.244Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8558
+
+[debug] [2023-08-21T15:52:54.712Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: res is not defined
+[info] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-08-21T15:52:55.820Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:52:55.921Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:52:56.923Z] Validating nodejs source
+[debug] [2023-08-21T15:52:57.533Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:52:57.533Z] Building nodejs source
+[debug] [2023-08-21T15:52:57.533Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:52:57.535Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:52:57.536Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8052
+
+[debug] [2023-08-21T15:52:58.012Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: res is not defined
+[info] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-08-21T15:53:01.445Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:53:02.449Z] Validating nodejs source
+[debug] [2023-08-21T15:53:03.110Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:53:03.110Z] Building nodejs source
+[debug] [2023-08-21T15:53:03.110Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:53:03.111Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:53:03.112Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8782
+
+[debug] [2023-08-21T15:53:03.643Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: res is not defined
+[info] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-08-21T15:53:03.746Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:53:03.847Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:53:04.848Z] Validating nodejs source
+[debug] [2023-08-21T15:53:05.470Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:53:05.470Z] Building nodejs source
+[debug] [2023-08-21T15:53:05.470Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:53:05.471Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:53:05.472Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8795
+
+[debug] [2023-08-21T15:53:05.929Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: res is not defined
+[info] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-08-21T15:53:19.382Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:53:20.386Z] Validating nodejs source
+[debug] [2023-08-21T15:53:21.009Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:53:21.009Z] Building nodejs source
+[debug] [2023-08-21T15:53:21.009Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:53:21.010Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:53:21.011Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8201
+
+[debug] [2023-08-21T15:53:21.440Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: res is not defined
+[info] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-08-21T15:53:24.447Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:53:25.449Z] Validating nodejs source
+[debug] [2023-08-21T15:53:26.068Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:53:26.069Z] Building nodejs source
+[debug] [2023-08-21T15:53:26.069Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:53:26.074Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:53:26.075Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8748
+
+[debug] [2023-08-21T15:53:26.513Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: res is not defined
+[info] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-08-21T15:53:47.923Z] DEBUG: File /Users/tjcc/Desktop/final-capstone/final-capstone/functions/index.js changed, reloading triggers
+[debug] [2023-08-21T15:53:48.927Z] Validating nodejs source
+[debug] [2023-08-21T15:53:49.883Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^13.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-21T15:53:49.883Z] Building nodejs source
+[debug] [2023-08-21T15:53:49.884Z] Failed to find version of module node: reached end of search path /Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-21T15:53:49.884Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-21T15:53:49.885Z] Found firebase-functions binary at '/Users/tjcc/Desktop/final-capstone/final-capstone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8600
+
+[debug] [2023-08-21T15:53:50.370Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-21T15:53:50.388Z] [functions] Loaded functions definitions from source: api.
